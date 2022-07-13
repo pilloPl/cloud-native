@@ -18,7 +18,17 @@ class CreditCardRepositoryTest {
 
     @Test
     void shouldLoadCreditCardsByBalance() {
+        //given
+        creditCardRepository.save(new CreditCard(BigDecimal.TEN));
+        creditCardRepository.save(new CreditCard(new BigDecimal(100)));
 
+        //when
+        List<CreditCard> allByBalanceGreaterThan = creditCardRepository.findAllByBalanceGreaterThan(new BigDecimal(50));
+        List<CreditCard> all = creditCardRepository.findAll();
+
+        //then
+        assertThat(allByBalanceGreaterThan).hasSize(1);
+        assertThat(all).hasSize(2);
     }
 
 }

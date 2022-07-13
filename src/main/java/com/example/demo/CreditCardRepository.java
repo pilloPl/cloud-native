@@ -7,4 +7,6 @@ import java.util.List;
 
 public interface CreditCardRepository extends JpaRepository<CreditCard, Long> {
 
+    List<CreditCard> findAllByBalanceGreaterThan(BigDecimal amount);
+
 }
