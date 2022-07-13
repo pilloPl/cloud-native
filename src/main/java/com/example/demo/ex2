@@ -1,4 +1,5 @@
 1. Uncomment actuator and web sections in pom.xml
-2. Create a class that represents new endpoint that provides some operational information
+2. Uncomment settings in application.properties so that endpoints are visible and not secured
+3. Create a class that represents new endpoint that provides some operational information
     - use @Endpoint (at class level) and @ReadOperation (at method level) annotations
-3. Verify with curl after running the app
+4. Verify with curl after running the app
