@@ -1,0 +1,7 @@
+1. Uncomment circuit breaker section in pom.xml
+2. Add CircuitBreakerFactory as a dependency to RiskController
+3. Configure the factory using
+    - TimeLimiterConfig
+    - CircuitBreakerConfig
+4. Create a circuit breaker using CircuitBreakerFactory::create method
+5. Wrap the call to riskClient with the newly created circuit breaker instance
