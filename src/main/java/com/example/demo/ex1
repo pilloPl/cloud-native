@@ -1,0 +1,6 @@
+1. Go to CreditCard class and make it ORM-managed entity
+    - @Id, @Entity will be helpful
+2. Uncomment spring-data-jpa nad h2 sections in pom.xml
+3. Add an arbitrary property to CreditCard class (like "balance")
+4. In CreditCardRepository, add a query that fetches card by a newly added property
+5. Verify your query with a test (CreditCardRepositoryTest)
